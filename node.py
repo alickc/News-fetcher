@@ -120,10 +120,3 @@ def saveAsTableTxt(site):
     with open(constants.path + site + "Table.txt", "a+",
               encoding="utf-8") as f:
         f.write(writer)
-
-
-# cats = ["independent", "guardian", "sputnik", "pravdareport","dailysabah","turkiyenewspaper", "hurriyetdailynews"]
-
-# start(["hurriyetdailynews.com"],
-#       ["Armenia Azerbaijan", "Armenia and Azerbaijan: The conflict", "2020 Nagorno-Karabakh conflict",
-#        "Minsk Protocol"])
