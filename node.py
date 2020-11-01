@@ -2,7 +2,7 @@ import requests
 
 import googlesearch_script
 import constants
-from news import sputnik, dailysabah, theguardian, hurriyetdailynews, pravdareport, independent, turkiyenewspaper
+from news import sputnik, dailysabah, theguardian, hurriyetdailynews, pravdareport, independent, turkiyenewspaper,lefigaro,lemonde
 import os
 
 
@@ -99,6 +99,14 @@ def start(sites, keywords):
                             c = len(os.listdir(constants.path + "hurriyetdailynews"))
                             print(c)
                             hurriyetdailynews.getNews(link, c)
+                        elif "lefigaro" in site:
+                            c = len(os.listdir(constants.path + "lefigaro"))
+                            print(c)
+                            lefigaro.getNews(link, c)
+                        elif "lemonde" in site:
+                            c = len(os.listdir(constants.path + "lemonde"))
+                            print(c)
+                            lemonde.getNews(link, c)
                     else:
                         print(link + " already fetched before.")
     for i in constants.supportedSites:
